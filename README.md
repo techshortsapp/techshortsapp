@@ -15,7 +15,7 @@ That’s why I built **TechShortsApp** — a calm place for developers to share 
 
 ## 🧱 What is TechShortsApp?
 
-A self-funded experiment — built from personal savings, between jobs and night shifts, while studying in the U.S. as a full-time international student.
+A self-funded experiment — built from personal savings.
 
 - Upload short tech videos
 - Filter by tech stack (JS, Python, etc.)
