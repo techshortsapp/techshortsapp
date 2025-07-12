@@ -1,33 +1,43 @@
 import { NextResponse } from "next/server";
-import clientPromise from "../../lib/mongodb";
-export async function POST(request: Request) {
-  try {
-    const { email } = await request.json();
+import { MongoClient } from "mongodb";
 
-    if (!email || !email.includes("@")) {
-      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+// Global MongoDB client cache for hot reloads (for dev environments)
+let cachedClient: MongoClient | null = null;
+
+const uri = process.env.MONGODB_URI!;
+const options = {};
+
+async function getClient() {
+  if (!cachedClient) {
+    const client = new MongoClient(uri, options);
+    await client.connect();
+    cachedClient = client;
+  }
+  return cachedClient;
+}
+
+export async function POST(req: Request) {
+  try {
+    const { email } = await req.json();
+
+    if (typeof email !== "string" || !email.includes("@") || !email.includes(".")) {
+      return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
-    const client = await clientPromise;
+    const client = await getClient();
     const db = client.db("techshorts");
     const collection = db.collection("subscribers");
 
-    // Check if already subscribed
-    const existing = await collection.findOne({ email: email.toLowerCase() });
-
+    const existing = await collection.findOne({ email });
     if (existing) {
-      return NextResponse.json({ message: "You're already subscribed." }, { status: 200 });
+      return NextResponse.json({ message: "Already subscribed." }, { status: 200 });
     }
 
-    // Save email with timestamp
-    await collection.insertOne({
-      email: email.toLowerCase(),
-      subscribedAt: new Date(),
-    });
+    await collection.insertOne({ email, subscribedAt: new Date() });
 
-    return NextResponse.json({ message: "Subscribed successfully!" }, { status: 201 });
-  } catch (error) {
-    console.error("[Subscribe Error]", error);
-    return NextResponse.json({ error: error }, { status: 500 });
+    return NextResponse.json({ message: "Subscription successful." }, { status: 200 });
+  } catch (err: any) {
+    console.error("❌ Subscription error:", err.message || err);
+    return NextResponse.json({ error: "Server error. Try again later." }, { status: 500 });
   }
 }
