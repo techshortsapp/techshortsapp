@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TechShortsApp — Calm Tech. Fast.
 
-## Getting Started
+Welcome to **TechShortsApp**, a focused short-video platform built exclusively for developers, creators, and tech learners who value clarity over chaos.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Why TechShortsApp?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In a world full of memes, dances, and distractions, tech creators have no dedicated space to grow.  
+That’s why I built **TechShortsApp** — a calm place for developers to share ideas in 90 seconds or less.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **No noise. No chasing trends. Just pure tech — shared in short, meaningful clips.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧱 What is TechShortsApp?
 
-To learn more about Next.js, take a look at the following resources:
+A self-funded experiment — built from personal savings, between jobs and night shifts, while studying in the U.S. as a full-time international student.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Upload short tech videos
+- Filter by tech stack (JS, Python, etc.)
+- Scroll-based feed, like Reels/Shorts
+- Built for fast learning, not virality
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Frontend                 | Backend                | Infra              |
+| ------------------------ | ---------------------- | ------------------ |
+| Next.js                  | Node.js/Firebase       | Vercel             |
+| TailwindCSS              | MongoDB/Supabase       | Cloudinary (video) |
+| Firebase Auth (optional) | Express.js (if needed) |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔍 MVP Goals
+
+- ✅ Launch clean prototype
+- ✅ See if tech creators use it
+- ✅ Gather feedback & track interest
+
+If it works, we scale. If not, we tried something different.
+
+---
+
+## 🧑‍💻 Built With
+
+- 💡 Passion for focused tech content
+- 💻 Every line of code from scratch
+- 💸 Self-funded — no investors, no distractions
+
+---
+
+## 📫 Contact
+
+Want to collaborate or give feedback?
+
+**Email:** [gotechshortsapp@gmail.com](mailto:gotechshortsapp@gmail.com)  
+**Website:** [https://www.techshortsapp.com](https://www.techshortsapp.com)
+
+---
+
+## 🔐 License
+
+MIT License. Use, build, remix — just give credit.
+
+---
+
+**Built by a developer — for developers. Welcome to TechShortsApp.**
