@@ -21,11 +21,11 @@ export default function AboutPage() {
 
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <header className="p-6 flex justify-between items-center shadow-md">
-          <div>
+          <Link href="/">
             <h1 className="text-2xl font-bold">
               TechShorts<span className="text-blue-600">App</span>
             </h1>
-          </div>
+          </Link>
           <nav className="space-x-4 text-sm font-medium">
             <Link href="/">
               <span
@@ -53,7 +53,9 @@ export default function AboutPage() {
         </header>
         <main className="flex-grow flex flex-col items-center justify-center px-4 py-12">
           <div className="max-w-2xl text-center">
-            <h2 className="text-3xl font-bold mb-6">Why I Built TechShorts</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              Why I Built TechShortsApp
+            </h2>
 
             <p className="text-gray-700 text-lg mb-4">
               In a world full of memes, dances, and distractions, tech creators
