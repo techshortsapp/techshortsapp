@@ -1,5 +1,5 @@
 > [!Note]  
-> This repo is not the official repo of TehcShortsApp. To avoid exposing the business logic, ranking algorithm, probabilistic mathematical calculation, both frontend and backend has been made private. This repo contains the public interface of TehcShortsApp.
+> This repo is not the official repo of TechShortsApp. To avoid exposing the business logic, ranking algorithm, probabilistic mathematical calculation, both frontend and backend has been made private. This repo contains the public interface of TechShortsApp.
 
 # TechShortsApp
 
