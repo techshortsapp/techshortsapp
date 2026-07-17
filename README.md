@@ -1,4 +1,4 @@
-> [!Note]
+> [!Note]  
 > This repo is not the official repo of TehcShortsApp. To avoid the business logic, algorithm, probabilistic mathematical ranking, both frontend and backend has been made private. This repo contains the public interface of TehcShortsApp.
 
 # TechShortsApp
